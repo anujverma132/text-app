@@ -7,7 +7,7 @@ import Alert from './components/Alert';
 // import About from './components/About';
 
 function App() {
-  const [mode , setmode] = useState('light');
+  const [mode , setmode] = useState('dark');
   const [alert , setalert] = useState(null);
 
   const showalert = (message , type)=>{
@@ -37,7 +37,7 @@ function App() {
     <>
       <Navbar mode={mode} togglemode={togglemode}/>
       <Alert alert={alert}/>
-      <Textform mode={mode} showalert={showalert}/>
+      <Textform mode={mode} showalert={showalert} body={document.body.style.backgroundColor = '#042743'}/>
       {/* <About /> */}
     </>
   );
